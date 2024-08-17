@@ -1,0 +1,26 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Keep track of your fav listings!</h2>
+    <div class="row">
+        <div class="container">
+            {% for listing in listings %}
+                <div class="card col-sm-6" style="width: 100rem;">
+                    <img class="card-img-top" src="{{ listing.image_link }}" alt="Pic">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ listing.title}}</h5>
+                        <p class="card-text">{{ listing.description }}</p>
+                        <p id="bid">Price: ${{ listing.starting_bid }}</p>
+                        <div style="font-weight: bold;">
+                            Created at: {{listing.created_time}}
+                        </div>
+                    </div>
+                    <a href="{% url 'page_listing' listing.id %}" class="btn btn-primary">Visit Product</a>
+                    <p style="color: white;">eqfvreqwrervevrvrvevevevfvvfevvvdvdvdv</p>
+                </div>
+                <p style="color: white;">eqfvreqwrervevrvrvevevevfvvfevvvdvdvdv</p>
+                <p style="color: white;">eqfvreqwrervevrvrvevevevfvvfevvvdvdvdv</p>
+            {% endfor %}
+        </div> 
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Choose a category:</h2>
+    <li><a href="{% url 'category' 'Home-Appliances' %}">Home Appliances</a></li>
+    <li><a href="{% url 'category' 'Electronics' %}">Electronics</a></li>
+    <li><a href="{% url 'category' 'Clothing-Fashion' %}">Clothing/Fashion</a></li>
+    <li><a href="{% url 'category' 'Kidsx-Supplies' %}">Kid's Supplies</a></li>
+    <li><a href="{% url 'category' 'Arts&Crafts' %}">Arts & Crafts</a></li>
+    <li><a href="{% url 'category' 'Accesories' %}">Accesories</a></li>
+    <li><a href="{% url 'category' 'Sports' %}">Sports</a></li>
+    <li><a href="{% url 'category' 'Books' %}">Books</a></li>
+{% endblock %}
